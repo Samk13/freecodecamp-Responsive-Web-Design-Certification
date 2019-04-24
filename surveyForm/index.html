@@ -3,24 +3,168 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>surveyForm</title>
+    <title>Frågeformulär Rökstop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    hello world
+
+    <!-- title -->
+    <header>
+        <div class="header">
+            <h1 id="title">Frågeformulär Rökstop</h1>
+            <p id="description">Let me calculate how hard is to quite smoking for You </p>
+            <h1>🚬</h1>
+        </div>
+    </header>
+    <main>
+        <form id="survey-form">
+
+            <!-- personal information -->
+            <div class="row">
+                <div class="left">
+                    <label id="name-label" class="label-input" for="name">*Name :</label>
+                </div>
+                <div class="right">
+                    <input id="name" type="text" required name="name" class="input-field" placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label id="email-label" class="label-input" for="email">*Email :</label>
+                </div>
+                <div class="right">
+                    <input id="email" type="email" required name="email" class="input-field"
+                        placeholder="email@gmail.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label id="number-label" class="label-input" for="Personnummer">Personnummer 🆔:</label>
+                </div>
+                <div class="right">
+                    <input id="number" type="number" required min="10000" max="99999999" name="personnummer"
+                        class="input-field" placeholder="enter your personal number here 12" value="19841106">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <label id="number-label2" class="label-input" for="telefonnummer">PhoneNumber 📲:</label>
+                </div>
+                <div class="right">
+                    <input id="fonnummer" type="number" name="telefonnummer" class="input-field" placeholder="093800125"
+                        min="1" max="999999999">
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label id="dropDownLabel" class="label-input" for="dropdown-menu">Wich option best describes your
+                        current
+                        role ?</label>
+                </div>
+                <div class="right">
+                    <select id="dropdown" name="currentRole" class="input-field">
+                        <option disabled value> Select an option </option>
+                        <option value="student">Student</option>
+                        <option value="fullTimeJob">FullTimeJob</option>
+                        <option value="fullTimeLearner">Full time learner</option>
+                        <option value="preferNotToSay">preferNotToSay</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <label id="search" name="search" for="search">
+                        Har du sökt hos oss tidigare för rökstopp ?
+                    </label>
+                </div>
+                <div class="right">
+                    <label class="radio"> <input class="input-field" type="radio" name="search" value="1">Yes</label>
+                    <label class="radio">
+                        <input class="input-field" type="radio" name="search" value="2">No
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <label for="front">Things that should be improved in the future
+                        (Check all that apply): </label>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <input class="checkInput" type="checkbox" name="checkbox" value="frontend">
+                            <label class="check-box" name="front" id="front-end" for="checkbox"> front end
+                                developer </label>
+                        </li>
+                        <li>
+                            <input class="checkInput" type="checkbox" name="checkbox" value="frontend">
+                            <label class="check-box" name="front" id="front-end" for="checkbox"> front end developer
+                            </label>
+                        </li>
+                        <li>
+                            <input class="checkInput" type="checkbox" name="checkbox" value="frontend">
+                            <label class="check-box" name="front" id="front-end" for="checkbox"> front end developer
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="left textarea">
+                    <label for="messageBox">Things that should be improved in the future
+                        (Check all that apply): </label>
+                </div>
+                <div class="right text">
+                    <textarea>
+
+                    </textarea>
+
+                </div>
+            </div>
+            <div class="row submit">
+                <button id="submit">submit<a href="#"></a></button>
+
+
+            </div>
 
 
 
 
 
 
+
+        </form>
+
+
+
+
+
+
+
+
+
+    </main>
 
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
+    <div class="footerparent">
+
+        <footer class="footer">created by
+            <a href="https://www.linkedin.com/in/osamak13/" target="_blank">Sam Arbid </a> ;) 🚬</footer>
+    </div>
 </body>
+
 
 </html>
