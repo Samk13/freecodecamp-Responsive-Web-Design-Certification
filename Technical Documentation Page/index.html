@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Blender3D Developer Documentation</title>
+</head>
+
+<body>
+    
+    <nav id="navbar">
+        <header>Blender3D Developer Documentation</header>
+        <ul>
+        <li><a class="nav-link" href="#Introduction" >Introduction</a></li>
+
+        <li><a class="nav-link" href="#Outliner" >Outliner</a></li>
+        <li><a class="nav-link" href="#Pack_and_Unpack_Data" >Pack and Unpack Data</a></li>
+        <li><a class="nav-link" href="#Data-Blocks" >Data-Blocks</a></li>
+        <li><a class="nav-link" href="#Users_Garbage_Collection" >Users Garbage Collection</a></li>
+        </ul>
+
+
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+                    Each blend-file contains a database. This database contains all scenes, objects, meshes, textures, etc. that are in the file.
+
+                    A file can contain multiple scenes and each scene can contain multiple objects. Objects can contain multiple materials which can contain many textures. It is also possible to create links between different objects.
+
+            </p>
+        </section>
+
+
+        <section class="main-section" id="Outliner">
+            <header>Outliner</header>
+            <p>
+                    You can easily inspect the contents of your file by using the Outliner editor, which displays all of the data in your blend-file.
+
+                    The Outliner allows you to do simple operations on objects, such as selecting, renaming, deleting, linking and parenting.
+                    
+                    <a href="#" target="_blacnk">ead more about the Outliner.</a>
+            </p>
+           
+        </section>
+
+
+        <section class="main-section" id="Pack_and_Unpack_Data">
+            <header>Pack and Unpack Data</header>
+            <p>
+                    <code>Info Editor ‣ File ‣ External Data ‣ Unpack Into Files…</code>
+
+                Blender has the ability to encapsulate (incorporate) various kinds of data within the blend-file that is normally saved outside of the blend-file. For example, an image texture that is an external image file can be put “inside”<code>//</code> the blend-file via Pack Into blend-file. When the blend-file is saved, a copy of that image file is put inside the blend-file. The blend-file can then be copied or emailed anywhere, and the image texture moves with it.
+            </p>
+
+            <p>
+
+                You know that an image texture is packed, because you will see a little gift box icon displayed in the <code>header</code>.
+
+            </p>
+        </section>
+
+
+        <section class="main-section" id="Data-Blocks">
+            <header>Data-Blocks</header>
+            <p>
+
+                 The base unit for any Blender project is the data-block. Examples of data-blocks include: <code>meshes, objects, materials, textures, node trees, scenes, texts, brushes</code>, and even <code>screens</code>.
+
+                 For clarity, bones, sequence strips and vertex groups are not data-blocks, they belong to armature, scene and mesh types respectively.
+                 
+                 Some common characteristics:
+                 <ul>
+                     <li>They are the primary contents of the blend-file.</li>
+                     <li>They can link to each other, for reuse and instancing. (child/parent, <code>object/object-data</code>, with modifiers and constraints too).</li>
+                     <li>Their names are unique.</li>
+                     <li>They can be added/removed/edited/duplicated.</li>
+                     <li>They can be linked between files (only enabled for a limited set of data-blocks).</li>
+                     <li>They can have their own animation data.</li>
+                     <li>They can have <a href="#" target="_blanck">Custom Properties.</a></li>
+                 </ul>
+
+            </p>
+            <p>
+                    When doing more complex projects, managing data-blocks becomes more important, especially when inter-linking blend-files.
+
+            </p>
+        </section>
+
+
+        <section class="main-section" id="Users_Garbage_Collection">
+            <header >Users Garbage Collection</header>
+            <p>
+                    It is good to be aware of how Blender handles data-blocks lifetime, when they are freed and why.
+                    
+
+                    Blender follows the general rule where unused data is eventually removed.
+                    
+                    Since it is common to add and remove a lot of data while working, this has the advantage of not having to manually manage every single <code>data-block</code>.
+            </p>
+            <p>
+                    
+                    This works by skipping zero user data-blocks when writing blend-files.
+                    
+                    In some cases, you want to save a data-block even when it is unused (typically for re-usable asset libraries). See Fake User.
+
+            </p>
+            <p>
+
+            </p>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
