@@ -1,7 +1,9 @@
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
+  scroll-behavior: smooth;
+  background-color: #f5dbd3;
 }
 
 * {
@@ -11,24 +13,34 @@ body {
 
 .intro {
   top: 0;
-  background: #e0ebe8;
-  min-height: 55vh;
+  /*background: #e0ebe8;*/
+
+  background-image: url(https://i.imgur.com/Wl9zvah.jpg?1);
+  background-repeat:no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 70vh;
   padding-top: 45vh;
   /*   line-height: 100vh; */
   /*   width:100%;
   height:96vh;
 border:solid; */
 }
+.introtext{
+  transform: translateY(-22rem) !important;
+}
 
 .intro p {
   color: green;
+  font-size: 2rem;
 }
+
 
 nav ul {
   text-align: right;
   position: fixed;
   width: 100%;
-  background-color: #e0ebe8;
+  background-color: #f5dbd3;
 }
 
 nav ul li {
@@ -41,6 +53,11 @@ nav ul li {
 nav ul li a {
   color: #008080;
   text-decoration: none;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -50,6 +67,7 @@ nav ul li a:hover {
 .work {
   padding-top: 60px;
   margin-top: -60px;
+  background-color: #f5dbd3;
 }
 
 .work .work-header {
@@ -63,7 +81,7 @@ nav ul li a:hover {
   color: #008080;
   display: inline-block;
   overflow: hidden;
-  border: 2px solid lightblue;
+  border: 2px solid #90c695;
   height: 220px;
   width: 280px;
   margin: 40px 100px;
@@ -86,20 +104,85 @@ nav ul li a:hover {
   width: 200px;
   height: 30px;
   margin: 20px auto 90px;
-   background: #e0ebe8;
+  background: #f5dbd3;
   color: #008080;
   font-weight: bold;
   font-size: 1em;
-  border: 2px solid #90C695;
+  border: 2px solid #90c695;
   border-radius: 4px;
   cursor: pointer;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
-
 .show-all:hover {
-  background: #E4F1FE;
+  background: #e4f1fe;
+  transition: 400ms;
+
   color: green;
+}
+
+#welcome-section > h1,
+p {
+  transform: translateY(-100px);
+}
+#welcome-section > h1 {
+  transform: translateY(-100px);
+  font-size: 3rem;
+}
+
+.contact {
+  /*   height:800px; */
+  /*   min-height:800px; */
+  background: #93c29b;
+  background-image: url(https://i.imgur.com/dE10QrV.jpg?1);
+
+  padding-bottom: 160px;
+}
+
+.header {
+  padding: 160px 0 110px;
+  letter-spacing: 3px;
+  
+}
+
+.contact-details {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 35px 45px 35px;
+  list-style-type: none;
+  border: 2px solid #90c695;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #f5dbd3;
+  color: #008080;
+  text-decoration: none;
+}
+
+.contact-details:hover {
+  background: #93c29b;
+  color: green;
+}
+
+footer {
+  height: 20px;
+  padding: 20px;
+  background: #22313f;
+  color: white;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.footertext {
+  margin-top: 90px;
+
+  letter-spacing: 5px;
+}
+
+footer a {
+  color: white;
 }
 
 @media only screen and (max-width: 500px) {
@@ -114,58 +197,24 @@ nav ul li a:hover {
   }
 }
 
-.contact {
-  /*   height:800px; */
-  /*   min-height:800px; */
-  background: #C8F7C5;
-  padding-bottom: 160px;
-}
-
-.header {
-  padding: 160px 0 110px;
-}
-
-.contact-details {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0 35px 45px 35px;
-  list-style-type: none;
-  border: 2px solid #90C695;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  background: #e0ebe8;
-  color: #008080;
-  text-decoration: none;
-}
-
-.contact-details:hover {
-  background: #E4F1FE;
-  color: green;
-}
-
-footer {
-  padding: 20px;
-  background: #22313F;
-  color: white;
-  line-height: 40px;
-}
-
-footer a {
-  color: white;
-}
-
 @media only screen and (max-width: 367px) {
   /*    #contact{
     min-height:1100px;
   } */
   .contact-details {
-    border: 2px solid #90C695;
+    border: 2px solid #90c695;
     border-radius: 0;
     width: 90px;
     height: 20px;
     padding: 10px;
     line-height: normal;
+  }
+  #welcome-section > h1,
+  p {
+    transform: translateY(-100px);
+  }
+  #welcome-section > h1 {
+    transform: translateY(-100px);
+    font-size: 3rem;
   }
 }
